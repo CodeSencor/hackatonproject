@@ -1,0 +1,9 @@
+services:
+  db:
+    name: foodxchange_db_test
+    image: postres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: foodxchange_db
+
