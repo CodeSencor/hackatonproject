@@ -3,3 +3,9 @@ backend/.gradle
 backend/build
 backend/HELP.md
 backend/gradle
+app/.idea
+app/.gradle
+app/build
+app/gradle
+app/HELP.md
+.idea
