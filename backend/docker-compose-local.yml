@@ -1,9 +1,11 @@
 services:
   db:
-    name: foodxchange_db_test
-    image: postres
+    image: postgres
     restart: always
+    network_mode: bridge
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: foodxchange_db
+    ports:
+    - "5432:5432"
 

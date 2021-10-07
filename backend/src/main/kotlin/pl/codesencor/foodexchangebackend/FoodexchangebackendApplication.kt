@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class FoodexchangebackendApplication
+class FoodExchangeBackendApplication
 
 fun main(args: Array<String>) {
-	runApplication<FoodexchangebackendApplication>(*args)
+	runApplication<FoodExchangeBackendApplication>(*args)
 }
