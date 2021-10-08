@@ -18,3 +18,21 @@ Content-Type: application/json
 }
 
 ###
+POST http://localhost:8080/api/product/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzZHBpa25pa0B3cC5wbCIsImlhdCI6MTYzMzcwODI1OSwiZXhwIjoxNjQyMzQ4MjU5fQ.m-0aOEOchGTLIAFggyPH1esW_20ZqTj1DoXGKkBAG-o
+
+{
+  "title": "Jakaś oferta",
+  "description": "jakiś opis oferty",
+  "address": "jakiś adres 45"
+}
+
+###
+
+GET http://localhost:8080/api/product/all
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzZHBpa25pa0B3cC5wbCIsImlhdCI6MTYzMzcwODI1OSwiZXhwIjoxNjQyMzQ4MjU5fQ.m-0aOEOchGTLIAFggyPH1esW_20ZqTj1DoXGKkBAG-o
+
+
+###

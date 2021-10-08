@@ -1,9 +1,11 @@
 package pl.codesencor.foodexchangebackend.user
 
+import pl.codesencor.foodexchangebackend.product.response.UserResponse
 import pl.codesencor.foodexchangebackend.role.Role
 import java.util.*
 import javax.persistence.*
 import kotlin.collections.HashSet
+import kotlin.math.log
 
 @Entity(name = "user_model")
 class User(
@@ -17,4 +19,11 @@ class User(
 
     @ManyToMany(fetch = FetchType.LAZY)
     var roles: Set<Role> = HashSet()
-)
+) {
+    fun toUserResponse() =  UserResponse(
+        id = id,
+        login = login,
+        name = name,
+        surName = surName
+    )
+}

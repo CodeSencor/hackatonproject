@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*
 import pl.codesencor.foodexchangebackend.jwt.request.LoginRequest
 import pl.codesencor.foodexchangebackend.jwt.request.RegisterRequest
 import pl.codesencor.foodexchangebackend.jwt.response.JwtResponse
-import pl.codesencor.foodexchangebackend.jwt.response.MessageResponse
+import pl.codesencor.foodexchangebackend.response.MessageResponse
 import pl.codesencor.foodexchangebackend.role.Role
 import pl.codesencor.foodexchangebackend.role.RoleRepository
 import pl.codesencor.foodexchangebackend.user.User
