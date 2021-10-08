@@ -1,17 +1,20 @@
 package pl.codesencor.foodexchangebackend.user
 
+import pl.codesencor.foodexchangebackend.role.Role
 import java.util.*
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
+import kotlin.collections.HashSet
 
-@Entity
+@Entity(name = "user_model")
 class User(
     @Id
-    @GeneratedValue(generator = "UUID")
-    private var id: UUID = UUID.randomUUID(),
-    val login: String,
-    val password: String,
-    val name: String,
-    val surName: String
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long = 0,
+    var login: String,
+    var password: String,
+    var name: String,
+    var surName: String,
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    var roles: Set<Role> = HashSet()
 )
