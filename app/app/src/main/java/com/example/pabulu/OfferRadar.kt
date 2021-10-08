@@ -12,23 +12,23 @@ class OfferRadar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_offer_radar)
-        var countryNames = arrayOf(
+        var offerNames = arrayOf(
             "China",
             "Russia",
             "US"
         )
-        var countryFlags = intArrayOf(
+        var offerPhotos = intArrayOf(
             R.drawable.flag_china,
             R.drawable.flag_russia,
             R.drawable.flag_us
         )
         var mListView = findViewById<View>(R.id.listview) as ListView
-        val myAdapter = ListAdapter(this@OfferRadar, countryNames, countryFlags)
+        val myAdapter = ListAdapter(this@OfferRadar, offerNames, offerPhotos)
         mListView.setAdapter(myAdapter)
         mListView.setOnItemClickListener { adapterView, view, i, l ->
             val mIntent = Intent(this@OfferRadar, OfferDetails::class.java)
-            mIntent.putExtra("countryName", countryNames[i])
-            mIntent.putExtra("countryFlag", countryFlags[i])
+            mIntent.putExtra("countryName", offerNames[i])
+            mIntent.putExtra("countryFlag", offerPhotos[i])
             startActivity(mIntent)
         }
     }

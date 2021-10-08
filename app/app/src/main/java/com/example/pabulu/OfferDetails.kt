@@ -11,11 +11,10 @@ class OfferDetails : AppCompatActivity() {
     var mImageView: ImageView? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
-        mImageView = findViewById<View>(R.id.imageView2) as ImageView
+        setContentView(R.layout.activity_offer_details)
+        mImageView = findViewById<View>(R.id.offerPhoto) as ImageView
         val mBundle = intent.extras
         if (mBundle != null) {
-            mToolbar!!.setTitle(mBundle.getString("countryName"))
             mImageView!!.setImageResource(mBundle.getInt("countryFlag"))
         }
     }

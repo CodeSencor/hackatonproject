@@ -20,7 +20,7 @@
             android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/offerPhoto"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:src="@mipmap/ic_launcher"
