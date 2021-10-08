@@ -13,8 +13,8 @@ class Login : AppCompatActivity() {
     }
     fun login(){
         val client = HttpClient(CIO)
-        val response = client.request("http://localhost:8080/api/auth/login"){
+/*        val response = client.request("http://localhost:8080/api/auth/login"){
 
-        }
+        }*/
     }
 }

@@ -40,7 +40,10 @@ class MainActivity : AppCompatActivity() {
             true
         }
             val btnAddOffer = findViewById<Button>(R.id.btnAddOffer)
-
+        if (!LoginService.logged) {
+            startActivity(Intent(this, Register::class.java))
+            finish()
+        }
 //            btnAddOffer.setOnClickListener{
 //                val Intent = Intent(this,AddOfferScreen::class.java)
 //            }
